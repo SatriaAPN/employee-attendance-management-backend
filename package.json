@@ -7,6 +7,10 @@
   "dependencies": {
     "express": "^4.17.3"
   },
+  "scripts": {
+    "start": "nodemon app.js",
+    "start-prod": "node app.js"
+  },
   "devDependencies": {
     "nodemon": "^2.0.15"
   }
