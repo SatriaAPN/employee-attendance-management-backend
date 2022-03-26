@@ -1,13 +1,8 @@
 const express = require('express');
 const app = express();
 
-app.get('/', (req, res, next) => {
-  try {
-    res.status(200).json({ message: 'successfully connected' });
-  } catch(err) {
-    res.status(400).json({ message: err.message });
-  }
-})
+// export the REST API endpoint
+app.use(require('./routers'));
 
 app.listen(3001, () => {
   console.log('the server start listening at port 3001')
