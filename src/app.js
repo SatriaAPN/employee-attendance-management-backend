@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const port = 3001;
 
 // initialize the middleware
 app.use(express.json());
@@ -9,6 +10,6 @@ app.use(express.urlencoded());
 app.use(require('./routers'));
 
 // start the server
-app.listen(3001, () => {
-  console.log('the server start listening at port 3001')
+app.listen(port, () => {
+  console.log(`the server start listening at port ${port}`);
 })
